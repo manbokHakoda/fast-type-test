@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fast Type — Бичилтийн техникийн шалгалт</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>⌨️ FAST TYPE</h1>
+        <p>1 минутын бичилтийн техникийн шалгалт</p>
+    </header>
+
+    <!-- Сурагчийн мэдээлэл -->
+    <section id="studentSection" class="card">
+
+        <h2>Сурагчийн мэдээлэл</h2>
+
+        <label for="studentName">Нэр</label>
+        <input
+            type="text"
+            id="studentName"
+            placeholder="Нэрээ оруулна уу"
+            autocomplete="off"
+        >
+
+        <label for="studentClass">Анги</label>
+        <input
+            type="text"
+            id="studentClass"
+            placeholder="Жишээ: 7А"
+            autocomplete="off"
+        >
+
+        <button id="startBtn" class="start-btn">
+            ▶ Шалгалт эхлүүлэх
+        </button>
+
+    </section>
+
+
+    <!-- Шалгалт -->
+    <section id="testSection" class="card hidden">
+
+        <div class="top-info">
+
+            <div class="timer-box">
+                <span>Хугацаа</span>
+                <strong id="timer">01:00</strong>
+            </div>
+
+            <div class="counter-box">
+                <span>Тэмдэгт</span>
+                <strong id="liveChars">0</strong>
+            </div>
+
+        </div>
+
+        <h2>Доорх текстийг аль болох зөв, хурдан бичнэ үү.</h2>
+
+        <div id="testText" class="test-text"></div>
+
+        <textarea
+            id="typingInput"
+            placeholder="Энд дээрх текстийг бичнэ үү..."
+            spellcheck="false"
+            autocomplete="off"
+            autocorrect="off"
+            autocapitalize="off"
+        ></textarea>
+
+        <div class="live-stats">
+
+            <div>
+                <span>Зөв</span>
+                <strong id="liveCorrect">0</strong>
+            </div>
+
+            <div>
+                <span>Алдаа</span>
+                <strong id="liveErrors">0</strong>
+            </div>
+
+            <div>
+                <span>Нарийвчлал</span>
+                <strong id="liveAccuracy">100%</strong>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Үр дүн -->
+    <section id="resultSection" class="card hidden">
+
+        <h2>🎉 Шалгалтын үр дүн</h2>
+
+        <div class="student-result">
+            <p>
+                <span>Нэр:</span>
+                <strong id="resultName"></strong>
+            </p>
+
+            <p>
+                <span>Анги:</span>
+                <strong id="resultClass"></strong>
+            </p>
+        </div>
+
+        <div class="results-grid">
+
+            <div class="result-item">
+                <span>⏱ Хугацаа</span>
+                <strong id="resultTime">60 сек</strong>
+            </div>
+
+            <div class="result-item">
+                <span>⌨️ Нийт тэмдэгт</span>
+                <strong id="resultChars">0</strong>
+            </div>
+
+            <div class="result-item">
+                <span>✅ Зөв тэмдэгт</span>
+                <strong id="resultCorrect">0</strong>
+            </div>
+
+            <div class="result-item">
+                <span>❌ Алдаа</span>
+                <strong id="resultErrors">0</strong>
+            </div>
+
+            <div class="result-item">
+                <span>🎯 Нарийвчлал</span>
+                <strong id="resultAccuracy">0%</strong>
+            </div>
+
+            <div class="result-item">
+                <span>⚡ CPM</span>
+                <strong id="resultCPM">0</strong>
+            </div>
+
+            <div class="result-item">
+                <span>🚀 WPM</span>
+                <strong id="resultWPM">0</strong>
+            </div>
+
+        </div>
+
+        <div id="saveStatus" class="save-status">
+            Google Sheets рүү илгээж байна...
+        </div>
+
+        <button id="restartBtn" class="restart-btn">
+            🔄 Дахин шалгалт өгөх
+        </button>
+
+    </section>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
